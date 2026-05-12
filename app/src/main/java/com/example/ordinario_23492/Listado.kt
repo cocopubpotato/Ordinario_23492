@@ -62,7 +62,6 @@ fun ListadoView(navegador: NavHostController,variable: List<Chuckpeli>,vm: Jokev
     val context = LocalContext.current
     val preferences = autor(contexto = context)
     val corrutina= rememberCoroutineScope()
-    var name = preferences.name.collectAsState("")
 
 
 
@@ -103,10 +102,10 @@ fun ListadoView(navegador: NavHostController,variable: List<Chuckpeli>,vm: Jokev
             , horizontalAlignment =Alignment.CenterHorizontally) {
             AsyncImage(
                 contentDescription = "iconito",
-                model = vm.traerURLImagen()
+                model = vm.chiste.toString()
             )
             Text("''${vm.chiste}''", fontStyle = FontStyle.Italic)
-            Text(vm.chisteid.toString())
+            Text(vm.chiste)
 
 //opcion B
                TextField(

@@ -23,6 +23,7 @@ class Jokeview: ViewModel() {
         viewModelScope.launch{
             withContext(Dispatchers.IO){
                 chiste = API().getImagenAleatoria() //llamamos a la funcion que esta en archivo api
+
             }
         }
     }
