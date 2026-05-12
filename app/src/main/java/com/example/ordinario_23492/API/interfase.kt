@@ -11,7 +11,7 @@ import retrofit2.http.Path
 interface interfase {
 
     @GET("jokes/random")
-    suspend fun joke(
+    suspend fun getjoke(
     ): Response<datosrecibidos>
 
 

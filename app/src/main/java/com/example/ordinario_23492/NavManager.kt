@@ -3,7 +3,6 @@ package com.example.ordinario_23492
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -20,7 +19,7 @@ fun NavManager() {
 
     NavHost(navController,startDestination= "inicio"){
         composable("inicio"){
-            Inicio(navController)
+            Inicio(navController,vM)
         }
         composable("Listado"){
             ListadoView(navController,Pelig, vM)
